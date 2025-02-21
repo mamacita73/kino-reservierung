@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34aa87a7-6119-4693-bb3d-64f7438ab0cc" name="Changes" comment="Aufbau von backend: express.js als Webserver; dotenv als Vartiablenverwalter; cors für API-Anfragen aus frontend + Test Aufruf der Route" />
+    <list default="true" id="34aa87a7-6119-4693-bb3d-64f7438ab0cc" name="Changes" comment="Aufbau von backend: express.js als Webserver; dotenv als Vartiablenverwalter; cors für API-Anfragen aus frontend + Test Aufruf der Route">
+      <change afterPath="$PROJECT_DIR$/kino-reservierung/frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kino-reservierung/frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kino-reservierung/frontend/eslint.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kino-reservierung/frontend/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kino-reservierung/frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kino-reservierung/frontend/public/vite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kino-reservierung/frontend/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kino-reservierung/frontend/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kino-reservierung/frontend/src/assets/react.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kino-reservierung/frontend/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kino-reservierung/frontend/src/main.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kino-reservierung/frontend/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kino-reservierung/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/kino-reservierung/backend/.env" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
