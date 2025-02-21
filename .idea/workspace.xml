@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34aa87a7-6119-4693-bb3d-64f7438ab0cc" name="Changes" comment="Aufbau von backend: express.js als Webserver; dotenv als Vartiablenverwalter; cors für API-Anfragen aus frontend + Test Aufruf der Route">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kino-reservierung/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kino-reservierung/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kino-reservierung/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kino-reservierung/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="34aa87a7-6119-4693-bb3d-64f7438ab0cc" name="Changes" comment="Aufbau von backend: express.js als Webserver; dotenv als Vartiablenverwalter; cors für API-Anfragen aus frontend + Test Aufruf der Route" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
