@@ -7,12 +7,17 @@ services:
       - "7000:7000"
     depends_on:
       - database
+      - mongodb
+      - rabbitmq
     environment:
       - PG_USER=postgres
-      - PG_PASSWORD=fhdwfhwd
+      - PG_PASSWORD=fhdwfhdw
       - PG_DATABASE=kino
       - PG_HOST=database
       - PG_PORT=5432
+      - MONGO_URI=mongodb://admin:fhdwfhdw@mongodb:27017/kino?authSource=admin
+      - RABBITMQ_URL=amqp://admin:fhdwfhdw@rabbitmq:5672
+    restart: always
 
   frontend:
     build: ./frontend
@@ -20,18 +25,66 @@ services:
       - "3000:80"
     depends_on:
       - backend
+    restart: always
 
   database:
     image: postgres:15
     restart: always
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: fhdwfhwd
+      POSTGRES_PASSWORD: fhdwfhdw
       POSTGRES_DB: kino
     ports:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: fhdwfhdw
+    depends_on:
+      - database
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: fhdwfhdw
+    volumes:
+      - mongo_data:/data/db
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: fhdwfhdw
+      ME_CONFIG_MONGODB_SERVER: mongodb
+    depends_on:
+      - mongodb
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"  # RabbitMQ Message-Broker
+      - "15672:15672"  # RabbitMQ Web-Management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: fhdwfhdw
+
 volumes:
   pgdata:
+  mongo_data:

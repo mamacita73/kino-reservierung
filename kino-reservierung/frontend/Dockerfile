@@ -1,4 +1,4 @@
-# Basis-Image für das Frontend
+# Basis-Image für den Build
 FROM node:18-alpine AS build
 
 # Arbeitsverzeichnis setzen
@@ -14,7 +14,15 @@ RUN npm run build
 
 # Verwende ein leichtes NGINX-Image als Server
 FROM nginx:alpine
+
+# Kopiere die gebauten Dateien in das Standard-Nginx-HTML-Verzeichnis
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Port 80 freigeben als Standard
+# Kopiere eine benutzerdefinierte Nginx-Konfiguration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Port 80 freigeben
 EXPOSE 80
+
+# Starten von Nginx im Vordergrund
+CMD ["nginx", "-g", "daemon off;"]
